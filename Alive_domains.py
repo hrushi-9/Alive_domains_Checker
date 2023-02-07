@@ -2,7 +2,9 @@ import pandas as pd
 import argparse
 import requests
 import os
+import datetime
 
+current_date_and_time = datetime.datetime.now().strftime("%d-%h-%Y")
 current_directory = os.getcwd() + '/Outputs/'
 domains = []
 df1 = pd.DataFrame(data=None,columns=['Alive_Domains/Subdomains','Status-Codes'])
@@ -47,8 +49,7 @@ for d in domains:
     domain = "".join(d)        # Since the df.values to list is giving list inside list and i couldnt pass that as an argument to the Is_alive()
     Is_alive(domain)
 
-df1.to_csv(current_directory+"Alive_domians.csv",index=False)
+df1.to_csv(current_directory+"Alive_domians_"+current_date_and_time+".csv",index=False)
 print("\nThe alive domains and its status codes are:--")
 print("------------------------------------------------------")
 print(df1)
-#print(domains)
