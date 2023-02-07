@@ -3,7 +3,7 @@ Active or not establishment is done based on the status-code responses.
 
 -------------------------------
 
-Install the required librarires:-
+Install the required libraries:-
 
 #> pip3 install -r requirements.txt
 
