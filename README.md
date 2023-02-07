@@ -1,5 +1,5 @@
 A utility to check whether a list of domains/sub_domains are alive or not.
-Active or not establishment is done based on the status-code responses.
+A domain is active or not establishment is done based on the status-code response.
 
 -------------------------------
 
